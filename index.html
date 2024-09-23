@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estacionamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="screen1" class="container active">
+        <h2>Cadastrar Placa</h2>
+        <input type="text" id="placaInput" placeholder="Digite a placa do carro" />
+        <button id="submitPlaca">Cadastrar Placa</button>
+        <p id="placaMessage"></p>
+    </div>
+
+    <div id="screen2" class="container">
+        <h2>Calcular Valor</h2>
+        <input type="text" id="placaCalculoInput" placeholder="Digite a placa do carro" />
+        <button id="calculateTime">Calcular Tempo</button>
+        <p id="calculoMessage"></p>
+        <button id="pagarButton" style="display:none;">Pagar</button>
+    </div>
+
+    <div id="screen3" class="container">
+        <h2>Verificar Pagamento</h2>
+        <input type="text" id="placaVerificaInput" placeholder="Digite a placa do carro" />
+        <button id="checkPayment">Verificar</button>
+        <p id="verificaMessage"></p>
+    </div>
+
+    <div>
+        <button onclick="changeScreen('screen1', 'screen1')">Tela de Cadastro</button>
+        <button onclick="changeScreen('screen1', 'screen2')">Tela de Cálculo</button>
+        <button onclick="changeScreen('screen1', 'screen3')">Tela de Verificação</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
