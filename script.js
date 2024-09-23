@@ -48,7 +48,8 @@ document.getElementById('checkPayment').addEventListener('click', () => {
 });
 
 // Função para alternar telas
-function changeScreen(from, to) {
+function changeScreen(off, from, to) {
+    document.getElementById(off).classList.remove('active');
     document.getElementById(from).classList.remove('active');
     document.getElementById(to).classList.add('active');
 }
